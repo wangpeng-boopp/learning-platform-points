@@ -1,6 +1,6 @@
 ---
 name: learning-platform-points
-description: Operate a user-authorized online learning platform to resume eligible courses, use the highest visible allowed playback speed, handle ordinary anti-idle prompts, complete permitted low-stakes quizzes, verify server-side credit, and recover interrupted sessions. Use only when the user asks to run, resume, or optimize course learning; never use it to evade attendance, concurrency, identity, proctoring, or risk controls.
+description: Operate a user-authorized online learning platform to resume eligible courses, use the highest visible allowed playback speed, handle ordinary visible continue-learning prompts, complete permitted low-stakes quizzes, verify server-side credit, and recover interrupted sessions. Use only when the user asks to run, resume, or optimize course learning and the platform or organization permits automation; never use it to evade attendance, concurrency, identity, proctoring, or risk controls.
 ---
 
 # Learning Platform Points
@@ -18,7 +18,7 @@ Run an authorized learning project continuously and efficiently while preserving
 
 Proceed only in a browser session the user owns and has authorized this agent to operate.
 
-- Ordinary course navigation, playback, visible speed selection, and clicking a normal `继续学习`-style prompt are in scope when the user explicitly asks to run or resume learning.
+- Ordinary course navigation, playback, visible speed selection, and acknowledging an ordinary visible prompt to continue the current learning media are in scope only when the user explicitly asks to run or resume learning and such automation is permitted by the platform or organization.
 - Submit assessments automatically only when the user has explicitly enabled automatic submission for the current task or continuing run. Do not treat an old or unrelated session as permanent authorization.
 - Eligible assessments are ordinary, open-book, low-stakes course checks for which assistance is allowed. Do not answer or submit proctored, identity-verified, licensing, credentialing, admissions, compliance-critical, or safety-critical assessments.
 - Stop for CAPTCHA, slider, face/voice verification, SMS/OTP, payment, legal attestation, or a prompt that only the user can truthfully complete.
@@ -80,13 +80,13 @@ After starting a course, stay with it until completion or a genuine unrecoverabl
 2. Select the greatest speed value actually exposed by the interface that is less than or equal to `preferred_rate`. If no exposed value satisfies the limit, keep the safe platform default rather than inventing a value.
 3. Verify the real media element or player state shows playing and the selected rate.
 4. Observe at least one valid learning countdown and set `countdown_seen: true` before completion can be inferred.
-5. Confirm the countdown decreases over two observations. If it does not, check pause state, anti-idle prompts, player loading, and network state.
+5. Confirm the countdown decreases over two observations. If it does not, check pause state, visible continue-learning prompts, player loading, and network state.
 
 ### 4. Monitor
 
 Poll often enough to catch prompts without creating noisy or overlapping actions.
 
-- When a normal anti-idle prompt such as `继续学习`, `继续播放`, or `继续观看` appears, click it once through the visible interface, then verify the prompt is gone, playback is active, the rate is correct, and the countdown resumes decreasing.
+- When an ordinary visible prompt asks the learner to continue or resume the current media, acknowledge it once through the normal interface, using the current platform profile rather than a fixed-language phrase list. Then verify the prompt is gone, playback is active, the rate is correct, and the countdown resumes decreasing. Do not preempt or suppress the prompt, and do not treat identity, attestation, or proctoring requests as ordinary continuation.
 - If the rate falls, restore it through the visible rate menu.
 - If media pauses without an identity or risk-control challenge, resume it and verify state.
 - Record checkpoints after meaningful transitions, not after every poll.
@@ -97,7 +97,7 @@ The platform's effective learning countdown is the primary completion signal.
 
 1. Require `countdown_seen: true` for the current subitem.
 2. While the countdown is above zero, keep monitoring.
-3. When it first displays `0秒`, do not navigate away.
+3. When the countdown first reaches zero in the current UI language, do not navigate away.
 4. Wait for at least two separated observations in which the countdown element is completely absent, or accept an equally explicit server-visible completed state.
 5. Confirm the server-visible course/subitem state changed. If the course has multiple videos, documents, or embedded checks, continue to the next required subitem.
 
