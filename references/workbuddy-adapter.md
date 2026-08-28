@@ -59,7 +59,7 @@ Optional capabilities improve reliability:
 2. Confirm BrowserSkill is installed and healthy.
 3. Test on one course in observe-only mode first: identify the project, course, rate control, countdown, task count, and points without clicking.
 4. Run one authorized course and verify the completion gate and server-side task delta.
-5. Test recovery from a paused player and a normal anti-idle prompt.
+5. Test recovery from a paused player and an ordinary visible continue-learning prompt that the platform permits the agent to acknowledge.
 6. Verify a borrowed tab is returned cleanly at the end.
 7. Only then enable a longer bounded run.
 
