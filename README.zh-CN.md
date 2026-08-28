@@ -45,6 +45,7 @@
 
 ```text
 learning-platform-points/
+├── LICENSE
 ├── README.md
 ├── README.zh-CN.md
 ├── SKILL.md
@@ -63,3 +64,7 @@ learning-platform-points/
 - 本地化控件标签只是已观察到的提示，不是通用固定字符串。
 - 公共资料可以帮助理解课程概念，但完成状态和积分仍以已登录平台显示的信息为准。
 - 达到及格即可；除非再次考试确实是获得积分的必要条件，否则不重考。
+
+## 许可证
+
+本项目采用 [MIT 许可证](LICENSE)。

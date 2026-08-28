@@ -45,6 +45,7 @@ Install or copy the folder into the host's Skills directory, then invoke `learni
 
 ```text
 learning-platform-points/
+├── LICENSE
 ├── README.md
 ├── README.zh-CN.md
 ├── SKILL.md
@@ -63,3 +64,7 @@ learning-platform-points/
 - Treat localized control labels as observed hints rather than universal strings.
 - Public documentation can describe concepts, but the signed-in platform remains the authority for completion and credit.
 - Passing is enough unless another attempt is genuinely required for credit.
+
+## License
+
+Released under the [MIT License](LICENSE).

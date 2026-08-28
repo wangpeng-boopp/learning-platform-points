@@ -1,6 +1,7 @@
 ---
 name: learning-platform-points
 description: Operate a user-authorized online learning platform to resume eligible courses, use the highest visible allowed playback speed, handle ordinary visible continue-learning prompts, complete permitted low-stakes quizzes, verify server-side credit, and recover interrupted sessions. Use only when the user asks to run, resume, or optimize course learning and the platform or organization permits automation; never use it to evade attendance, concurrency, identity, proctoring, or risk controls.
+license: MIT
 ---
 
 # Learning Platform Points
