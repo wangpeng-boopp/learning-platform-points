@@ -1,0 +1,7 @@
+interface:
+  display_name: "学习平台积分助手"
+  short_description: "自动衔接授权课程、处理防挂机、完成合规课后测验并核验积分到账"
+  default_prompt: "Use $learning-platform-points to continue my authorized learning project safely and efficiently."
+
+policy:
+  allow_implicit_invocation: true
